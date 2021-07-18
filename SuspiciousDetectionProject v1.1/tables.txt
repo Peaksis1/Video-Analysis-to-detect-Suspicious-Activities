@@ -1,0 +1,19 @@
+drop database analysis;
+
+create database analysis;
+use analysis;
+ 
+create table  sign_up(
+ name varchar(30) NOT NULL,
+ emailid varchar(50) NOT NULL PRIMARY KEY,
+ password varchar(8) NOT NULL);
+ 
+DESC sign_up;
+
+
+create table login(
+emailid varchar(50) NOT NULL , 
+password varchar(8) NOT NULL,
+FOREIGN KEY(emailid) REFERENCES sign_up(emailid));
+
+Desc login;
